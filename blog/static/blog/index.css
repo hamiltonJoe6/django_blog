@@ -1,0 +1,52 @@
+body {
+	background-color: white;
+	width: 80%;
+	margin: auto;
+}
+#search {
+	width: 40%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+}
+
+.btn-search {
+	background-color: #04AA6D;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 25%;
+}
+
+button:hover {
+	opacity: 0.8;
+}
+.blogpost {
+	border: 1px solid black;
+	background-color: #1a202c;
+	border-radius: 4px;
+	margin-bottom: 10px;
+	text-decoration: none;
+	padding: 15px;
+	cursor: pointer;
+	margin-top: 10px;
+}
+
+.blogpost:hover {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+h3 {
+	color: #1a75de;
+}
+
+a {
+	text-decoration: none;
+}
+
+p {
+	color: white;
+}

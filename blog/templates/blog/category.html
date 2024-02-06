@@ -1,0 +1,22 @@
+{% extends 'blog/base/base.html' %}
+
+{% load static %} 
+
+{% block title%}Category{% endblock %}
+
+{% block site_css %}
+	<link rel="stylesheet" href="{% static 'blog/index.css' %}">
+{% endblock %}
+
+{% block body %}
+	{% for blog in blogs %}
+		{% if blog.status == 'published' %}
+			<div class="blogpost">
+			<a href="{% url 'detail' blog.slug %}">
+				<h3>{{blog.title}}</h3>
+				<p>{{blog.body|safe|truncatechars:150}}</p>
+			</a>
+			</div>
+		{% endif %}
+	{% endfor %}
+{% endblock %}

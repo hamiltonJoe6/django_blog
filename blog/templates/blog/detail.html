@@ -1,0 +1,25 @@
+{% extends 'blog/base/base.html' %}
+
+{% load static %} 
+
+{% block title%}Detail{% endblock %}
+
+{% block site_css %}
+	<link rel="stylesheet" href="{% static 'blog/detail.css' %}">
+{% endblock %}
+
+{% block body %}
+    <div class="left-block">
+        <h2>{{blog.title|safe}}</h2>
+        <p>{{blog.body|safe}}</p>
+    </div>
+    
+    <div class="right-block">
+        <h3 style="margin-left: 30px;">Latest Blog</h3>
+        {% for latest_blog in latest %}
+            <ul style="list-style: none;">
+                <li><a href="{% url 'detail' latest_blog.slug %}">{{latest_blog.title|safe}}</a></li>
+            </ul>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'blog/base/base.html' %}
+
+{% load static %} 
+
+{% block title%}About{% endblock %}
+
+{% block site_css %}
+	<link rel="stylesheet" href="{% static 'blog/about.css' %}">
+{% endblock %}
+
+{% block body %}
+
+    <div class="block">
+        <div class="left-block" style="padding: 10px;">
+            <h1>About this website</h1>
+    
+            <h4>Hello I am Debajit Saha, this is a simple website which I built
+                where I write mostly about Django and Javascript. About me, I love learning 
+                about new technologies and sharing the same on this blog.If you have and 
+                queries contact me on debo.saha@gmail.com.
+            </h4>
+        </div>
+        <div class="right-block">
+            <img src="{% static 'images/about.jpg' %}" width="100%"/>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-block">
+            <p>Powered by AWS and GoDaddy</p>
+        </div>
+    </footer>
+{% endblock %}
